@@ -1,5 +1,9 @@
 # NodeMCUInternetClock
 
+1. [I2C Address Locator](/i2cAddressLocator)
+2. [NodeMCU WiFi Configure](/nodeMCUwifiConfigure)
+3. [Clock NTP-client](/clock_NTPclient)
+
 > #### **_Video Tutorial_**
 >
 > [<img align="left" alt="video thumbnail" width="75" src="https://img.youtube.com/vi/ZDqQKUonS4k/0.jpg"/>](https://youtu.be/ZDqQKUonS4k) [Nodemcu local time Internet clock \| IoT series #3 \| saMvidita](https://youtu.be/ZDqQKUonS4k)
