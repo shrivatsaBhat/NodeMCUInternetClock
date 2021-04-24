@@ -1,3 +1,3 @@
 # Circuit Diagram
 
-<img src='_images/nodeOLED.jpg' alt='circuit diagram'/>
+<img align="left" alt="circuit diagram" width="480" src="/_images/nodeOLED.jpg"/>
