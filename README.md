@@ -23,3 +23,5 @@
 > >
 > > Download the board manger for the ardunio ide
 > > [Guide from Third party refence](https://www.instructables.com/Steps-to-Setup-Arduino-IDE-for-NODEMCU-ESP8266-WiF/)
+>
+> [More on the ESP8266 NTP Server](https://lastminuteengineers.com/esp8266-ntp-server-date-time-tutorial/)
