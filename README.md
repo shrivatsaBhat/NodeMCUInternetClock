@@ -1,7 +1,10 @@
 # NodeMCUInternetClock
 
-> [<img align="left" alt="video thumbnail" width="10%" src="https://img.youtube.com/vi/ZDqQKUonS4k/0.jpg" />](!https://youtu.be/ZDqQKUonS4k) **_Video Tutorial_**
-> ([link](!https://youtu.be/ZDqQKUonS4k))
+> #### **_Video Tutorial_**
+>
+> [<img align="left" alt="video thumbnail" width="75" src="https://img.youtube.com/vi/ZDqQKUonS4k/0.jpg"/>](https://youtu.be/ZDqQKUonS4k) [Nodemcu local time Internet clock \| IoT series #3 \| saMvidita](https://youtu.be/ZDqQKUonS4k)
+>
+> <br/>
 >
 > ### Dependencies
 >
