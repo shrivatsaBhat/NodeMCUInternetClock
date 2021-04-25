@@ -1,14 +1,23 @@
+/*
+ *  The ESP8266 Internet Connection Status
+ *  based off the /ESP8266WiFi/WiFiClient example
+ * 
+ */
+ 
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 
-const char* ssid = "PARDAKANDA";
-const char* password = "shri@9803";
+// Your WiFi network credentials
+const char* ssid = "ssid";
+const char* password = "password";
 
+// The URL we will use to test our connection
 const char* host = "www.google.co.in";
 const byte port = 80;
 
 ESP8266WiFiMulti wifiMulti;
 
+// Function declarations
 bool ConnectWiFi(int);
 bool ConnectInternet(void);
 bool ConnectNetwork(void);
@@ -29,13 +38,15 @@ void loop() {
     delay(3000);
 }
 
-
-bool ConnectWiFi(int retryDelay = 1000) {
+// @param int retryDelay: Time in milliseconds to wait between status checking (default 500ms)
+bool ConnectWiFi(int retryDelay = 500) {
+    // Add all available accesspoint names
     wifiMulti.addAP(ssid,password);
 
     if(WiFi.status() != WL_CONNECTED){
         Serial.print("\nAttempting to connect to WiFi\n");
         Serial.print("Connecting");
+        // Connect the strongest network
         while(wifiMulti.run() != WL_CONNECTED){
             Serial.print(".");
             delay(retryDelay);
@@ -57,6 +68,7 @@ bool ConnectWiFi(int retryDelay = 1000) {
 bool ConnectInternet() {
     WiFiClient client;
 
+    // Connect to the host and port 
     int isConnected = client.connect(host, port);
 
     if (!isConnected){
@@ -65,34 +77,29 @@ bool ConnectInternet() {
         delay(1000);
         return false;
     }
-
     if(isConnected) {
         Serial.println("Connection Built");
         client.stop();
         return true;
     }
-
     return false;
 }
 
 
 bool ConnectNetwork() {
+    // Holder to store Bolean status
     bool hasInternet = false;
     bool isWiFi = ConnectWiFi(800);
 
     while(!isWiFi) {
         isWiFi = ConnectWiFi(1000);
     }
-
     if(isWiFi){
         hasInternet = ConnectInternet();
-
         while(!hasInternet) {
             hasInternet = ConnectInternet();
         }
-
-        return true;
+        return hasInternet;
     }
-
-    return false;
+    return hasInternet;
 }
