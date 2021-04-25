@@ -2,7 +2,8 @@
 
 1. [I2C Address Locator](/i2cAddressLocator)
 2. [NodeMCU WiFi Configure](/nodeMCUwifiConfigure)
-3. [Clock NTP-client](/clock_NTPclient)
+3. [ESP Check Internet Connetion](/esp_internet_check)
+4. [Clock NTP-client](/clock_NTPclient)
 
 > #### **_Video Tutorial_**
 >
@@ -23,5 +24,7 @@
 > >
 > > Download the board manger for the ardunio ide
 > > [Guide from Third party refence](https://www.instructables.com/Steps-to-Setup-Arduino-IDE-for-NODEMCU-ESP8266-WiF/)
+> >
+> > [Source of refence for the ESP Internet Check](https://github.com/3zuli/esp_internet_alarm)
 >
 > [More on the ESP8266 NTP Server](https://lastminuteengineers.com/esp8266-ntp-server-date-time-tutorial/)
